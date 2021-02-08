@@ -11,7 +11,7 @@ namespace RecruitCatTiwariph.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public decimal TargetSalary { get; set; }
-        public DateTime OptionalStartDate { get; set; }
+        public DateTime? StartDate { get; set; }
         public string Gender { get; set; }
         public string SocialSecurityNumber { get; set; }
         public decimal? CurrentSalary { get; set; }
