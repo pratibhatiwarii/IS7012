@@ -9,6 +9,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using RecruitCatTiwariph.Data;
+using Gtt.Uc.EntityFramework;
 
 namespace RecruitCatTiwariph
 {
@@ -26,8 +27,9 @@ namespace RecruitCatTiwariph
         {
             services.AddRazorPages();
 
-            services.AddDbContext<RecruitCatTiwariphContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("RecruitCatTiwariphContext")));
+            //services.AddDbContext<RecruitCatTiwariphContext>(options =>
+                    //options.UseSqlServer(Configuration.GetConnectionString("RecruitCatTiwariphContext")));
+            services.AddGttMem<RecruitCatTiwariphContext>("bbfc9a0f-f812-42ad-b3fe-5f8e9deb9416");
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
